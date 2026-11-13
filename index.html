@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dell Boy">
+<meta name="theme-color" content="#0B0B0C">
+<meta name="format-detection" content="telephone=no">
+<title>Dell Boy Dashboard</title>
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0B0C; --card:#2A2A2A; --card2:#3A3A3A; --line:rgba(255,255,255,.07);
+  --fg:#FAFAF7; --fg2:#CFCFCB; --mute:#8A8A8A; --dim:#4A4A4A;
+  --acc:#FFF351; --dn:#E2695F;
+  --sat:env(safe-area-inset-top,0px); --sab:env(safe-area-inset-bottom,0px);
+  --sal:env(safe-area-inset-left,0px); --sar:env(safe-area-inset-right,0px);
+  --gut:max(20px,calc(var(--sal) + 16px));
+  --tabh:60px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:var(--bg);overflow:hidden;overscroll-behavior:none}
+body{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;font-variant-numeric:tabular-nums;color:var(--fg);-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;user-select:none;-webkit-user-select:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;text-align:inherit;-webkit-appearance:none;appearance:none}
+button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+#app{position:fixed;inset:0;display:flex;flex-direction:column}
+#scroll{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;scrollbar-width:none;padding-top:var(--sat);padding-left:var(--sal);padding-right:var(--sar)}
+#scroll::-webkit-scrollbar{display:none}
+/* status-bar scrim so content scrolling under the notch stays legible */
+#scrim{position:fixed;top:0;left:0;right:0;height:var(--sat);background:var(--bg);z-index:6;pointer-events:none}
+.px{padding-left:var(--gut);padding-right:var(--gut)}
+.screen{padding-bottom:32px;animation:fadeIn .18s ease-out}
+.row{display:flex;align-items:center}
+.between{display:flex;justify-content:space-between;align-items:center}
+.baseline{display:flex;justify-content:space-between;align-items:baseline}
+.h2{font-size:20px;font-weight:700;letter-spacing:-.3px}
+.sub{font-size:13px;color:var(--mute)}
+.card{background:var(--card);border-radius:18px}
+.iconbtn{width:44px;height:44px;border-radius:22px;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;position:relative;flex:none}
+.iconbtn:active,.pill:active,.tap:active{opacity:.6}
+.bars i{display:block;height:2px;background:var(--fg);border-radius:1px}
+.pill{font-size:13px;font-weight:500;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:var(--fg2);white-space:nowrap}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);background:var(--card);border-radius:14px;padding:4px;height:44px}
+.seg button{display:flex;align-items:center;justify-content:center;font-size:14px;border-radius:10px;font-weight:500;color:var(--mute);transition:background .15s,color .15s}
+.seg button[aria-pressed=true]{background:var(--fg);color:#0A0A0A;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.list-row{display:grid;grid-template-columns:16px 56px minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);width:100%}
+.list-row .nm{font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.right{display:flex;flex-direction:column;gap:2px;align-items:flex-end}
+.thumb{display:flex;align-items:center;justify-content:center;font-weight:800;color:rgba(250,250,247,.92);letter-spacing:-.5px;overflow:hidden;flex:none;position:relative}
+.thumb::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 30% 15%,rgba(255,255,255,.14),transparent 60%)}
+.hscroll{display:flex;gap:10px;overflow-x:auto;margin-top:14px;padding:0 var(--gut);scrollbar-width:none;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.hscroll::-webkit-scrollbar{display:none}
+.hscroll>*{scroll-snap-align:start;scroll-margin-left:var(--gut)}
+/* tab bar */
+#tabs{flex:none;position:relative;z-index:5;border-top:1px solid rgba(255,255,255,.1);background:rgba(11,11,12,.94);-webkit-backdrop-filter:saturate(1.4) blur(20px);backdrop-filter:saturate(1.4) blur(20px);display:grid;grid-template-columns:repeat(5,1fr);padding:8px calc(var(--sar) + 6px) calc(var(--sab) + 6px) calc(var(--sal) + 6px);min-height:calc(var(--tabh) + var(--sab))}
+#tabs button{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;font-size:11px;font-weight:500;color:var(--mute);padding-top:2px;min-height:48px}
+#tabs button[aria-current=page]{color:var(--fg);font-weight:600}
+.ti{width:22px;height:22px;display:flex;align-items:center;justify-content:center}
+/* sheet */
+#backdrop{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.66);opacity:0;pointer-events:none;transition:opacity .22s ease-out}
+#sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;background:var(--card);border-radius:28px 28px 0 0;padding:10px calc(var(--sar) + 22px) calc(var(--sab) + 16px) calc(var(--sal) + 22px);max-height:calc(100% - var(--sat) - 24px);overflow-y:auto;overscroll-behavior:contain;transform:translateY(105%);visibility:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),visibility 0s linear .3s;max-width:640px;margin:0 auto}
+body.sheet-open #backdrop{opacity:1;pointer-events:auto}
+body.sheet-open #sheet{transform:none;visibility:visible;transition:transform .3s cubic-bezier(.2,.8,.2,1),visibility 0s}
+.grab{width:38px;height:5px;border-radius:3px;background:var(--dim);margin:0 auto}
+.radio{width:22px;height:22px;border-radius:11px;border:2px solid var(--dim);display:flex;align-items:center;justify-content:center}
+.radio.on{border-color:var(--fg);background:var(--fg)}
+.radio.on::after{content:"";width:8px;height:8px;border-radius:4px;background:#0A0A0A}
+.chip{display:flex;gap:6px;font-size:14px;font-weight:500;padding:11px 14px;border-radius:999px;color:var(--fg2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.chip[aria-pressed=true]{background:var(--fg);color:#0A0A0A;font-weight:700;box-shadow:none}
+.cta{width:100%;margin-top:24px;height:56px;border-radius:18px;background:var(--acc);color:#0A0A0A;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800}
+.cta:active{transform:scale(.98)}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media (min-width:600px){ #scroll>.wrap{max-width:560px;margin:0 auto} }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="scrim"></div>
+  <main id="scroll"><div class="wrap" id="view"></div></main>
+  <nav id="tabs" aria-label="Main"></nav>
+</div>
+<div id="backdrop" data-act="closeSheet"></div>
+<section id="sheet" role="dialog" aria-modal="true" aria-label="Filters"></section>
+
+<script>
+(function(){
+'use strict';
+const S = { period:'week', plat:'all', brands:[], sheet:false, view:'home', pid:'tasman', back:'home', repriced:{} };
+const $view = document.getElementById('view'), $scroll = document.getElementById('scroll'),
+      $tabs = document.getElementById('tabs'), $sheet = document.getElementById('sheet');
+
+// id, name, brand, colourway, avg price, units [today, week, 30d], growth % [today, week, 30d], Whatnot units (week), sizes, stock, unsold listings (week)
+const P = [
+  ['tasman','UGG Tasman','UGG','Chestnut',108,[10,34,92],[38,41,52],24,[5,6,7],6,2],
+  ['9060','New Balance 9060','New Balance','Sea Salt',112,[6,26,88],[20,18,14],20,[9,6,8],12,3],
+  ['ultramini','UGG Ultra Mini','UGG','Chestnut',115,[6,22,58],[50,63,88],9,[4,5,6],4,1],
+  ['gel1130','Asics Gel-1130','Asics','White/Pure Silver',82,[6,24,70],[33,35,29],10,[5,6,9],9,3],
+  ['kayano','Asics Gel-Kayano 14','Asics','Cream/Black',118,[3,14,44],[25,27,22],11,[9,8,10],7,2],
+  ['p6000','Nike P-6000','Nike','Metallic Silver',76,[4,21,74],[14,12,8],8,[5,6,7],15,3],
+  ['2002r','New Balance 2002R','New Balance','Rain Cloud',98,[2,13,46],[10,9,5],10,[9,8],10,3],
+  ['xt6','Salomon XT-6','Salomon','Vanilla Ice',135,[2,8,28],[8,6,4],7,[9,10],5,2],
+  ['mexico66','Onitsuka Tiger Mexico 66','Onitsuka Tiger','Birch/Green',84,[3,11,30],[44,48,61],5,[4,5],3,1],
+  ['nb530','New Balance 530','New Balance','White/Silver',74,[1,9,36],[-12,-8,-6],3,[5,6],13,4],
+  ['samba','Adidas Samba OG','Adidas','White/Black',68,[1,3,16],[-30,-24,-28],2,[8,9],14,5],
+  ['nb550','New Balance 550','New Balance','White/Green',72,[1,3,14],[-20,-17,-19],2,[8,9],9,3],
+  ['dunk','Nike Dunk Low Panda','Nike','Panda',65,[0,2,12],[-100,-31,-36],1,[6,7],11,4]
+];
+const BRANDS = ['UGG','New Balance','Asics','Nike','Adidas','Onitsuka Tiger','Salomon'];
+const BRAND_TINT = { 'UGG':'#6B4A2E', 'New Balance':'#3E4A5C', 'Asics':'#2F4F6B', 'Nike':'#4A4A4A', 'Adidas':'#333A33', 'Onitsuka Tiger':'#5C4A2A', 'Salomon':'#4F5A44' };
+const SHOWS = [['Sunday Night Heat 🔥','Sun 15 Nov','wn',1.185],['Sunday Night Heat 🔥','Sun 15 Nov','wn',1.04],['Cosy Season Sale','Sun 15 Nov','tt',.96],['Saturday Sole Session','Sat 14 Nov','wn',1.09],['Payday Friday Steals','Fri 13 Nov','tt',.852]];
+
+const pi = () => ({ today:0, week:1, month:2 })[S.period];
+const f = n => '£' + Math.round(n).toLocaleString('en-GB');
+const pc = g => (g >= 0 ? '+' : '−') + Math.round(Math.abs(g) * 100) + '%';
+const sum = (a, fn) => a.reduce((x, y) => x + fn(y), 0);
+const gCol = g => g >= 0 ? 'var(--acc)' : 'var(--dn)';
+
+function rows(useBrands){
+  const i = pi(), k = [.35, 1, 3.2][i];
+  return P.filter(r => !useBrands || !S.brands.length || S.brands.includes(r[2])).map(r => {
+    const [id, name, brand, cw, asp, us, gs, wnW, sizes, stock, ul] = r;
+    const wnAll = Math.round(us[i] * wnW / us[1]), ttAll = us[i] - wnAll;
+    const wnU = S.plat === 'tt' ? 0 : wnAll, ttU = S.plat === 'wn' ? 0 : ttAll, u = wnU + ttU;
+    const g = gs[i] / 100, rev = u * asp;
+    const prev = g <= -1 ? (S.plat === 'tt' ? 0 : asp) : rev / (1 + g);
+    return { id, name, brand, cw, asp, u, g, rev, prev, wnU, ttU, sizes, stock, mo: us[2], listed: u + Math.round(ul * k) };
+  });
+}
+function deco(r, i){
+  const reprice = r.g <= -.3;
+  return Object.assign({}, r, {
+    rank: i + 1, revF: f(r.rev), gF: pc(r.g), gC: gCol(r.g),
+    meta: r.u + ' sold · avg £' + r.asp, diffF: (r.g >= 0 ? '+' : '−') + f(Math.abs(r.rev - r.prev)),
+    sizesF: 'UK ' + r.sizes.join(' · ') + ' · ' + (r.wnU >= r.ttU ? 'Whatnot' : 'TikTok Live'),
+    action: reprice ? 'Reprice?' : 'Pause restock', reprice
+  });
+}
+function splitOf(wnRev, ttRev, wnU, ttU){
+  const tot = wnRev + ttRev || 1, wp = Math.round(wnRev / tot * 100);
+  return { wnW: wp + '%', wnRev: f(wnRev), ttRev: f(ttRev), wnSub: wp + '% · ' + wnU + ' sold', ttSub: (100 - wp) + '% · ' + ttU + ' sold' };
+}
+function alloc(total, sizes){
+  const w = sizes.length === 3 ? [.45, .33, .22] : [.55, .45];
+  const a = w.map(x => Math.floor(total * x)); a[0] += total - a.reduce((x, y) => x + y, 0);
+  return a;
+}
+const VS = () => ['vs last Sunday', 'vs last week', 'vs previous 30 days'][pi()];
+
+function thumb(r, w, h, rad, fs){
+  const ini = r.brand.split(' ').map(x => x[0]).join('').slice(0, 2);
+  return `<div class="thumb" aria-hidden="true" style="width:${w};height:${h};border-radius:${rad}px;font-size:${fs}px;background:linear-gradient(150deg,${BRAND_TINT[r.brand] || '#3A3A3A'},#1C1C1D)">${ini}</div>`;
+}
+const filterBtn = (label) => `<button class="iconbtn bars" data-act="openSheet" aria-label="${label || 'Filters'}"><i style="width:18px"></i><i style="width:12px"></i><i style="width:6px"></i>${(S.plat !== 'all' || S.brands.length) ? '<span style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:5px;background:var(--acc);box-shadow:0 0 0 2px var(--bg)"></span>' : ''}</button>`;
+const segHTML = () => `<div class="seg" role="group" aria-label="Period">${[['today','Today'],['week','Week'],['month','Month']].map(([k,l]) => `<button data-act="period" data-arg="${k}" aria-pressed="${S.period === k}">${l}</button>`).join('')}</div>`;
+const splitHTML = (sp) => `
+  <div class="row" style="gap:4px;height:14px;margin-top:16px"><div style="width:${sp.wnW};height:100%;background:var(--fg);border-radius:7px"></div><div style="flex:1;height:100%;background:var(--mute);border-radius:7px"></div></div>
+  <div class="grid2" style="gap:16px;margin-top:16px">
+    <div><div class="row sub" style="gap:7px"><span style="width:8px;height:8px;border-radius:4px;background:var(--fg)"></span>Whatnot</div><div style="font-size:26px;font-weight:800;letter-spacing:-.8px;margin-top:4px">${sp.wnRev}</div><div class="sub" style="margin-top:2px">${sp.wnSub}</div></div>
+    <div><div class="row sub" style="gap:7px"><span style="width:8px;height:8px;border-radius:4px;background:var(--mute)"></span>TikTok Live</div><div style="font-size:26px;font-weight:800;letter-spacing:-.8px;margin-top:4px">${sp.ttRev}</div><div class="sub" style="margin-top:2px">${sp.ttSub}</div></div>
+  </div>`;
+const listRow = (p, third) => `
+  <button class="list-row tap" data-act="open" data-arg="${p.id}">
+    <span style="font-size:13px;font-weight:700;color:var(--mute)">${p.rank}</span>
+    ${thumb(p, '56px', '56px', 14, 18)}
+    <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span class="nm">${p.name}</span><span class="sub" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.cw}</span><span style="font-size:12px;color:var(--mute)">${third}</span></span>
+    <span class="right"><span style="font-size:16px;font-weight:700">${p.revF}</span><span style="font-size:13px;font-weight:700;color:${p.gC}">${p.gF}</span><span style="font-size:12px;color:var(--mute);white-space:nowrap">${p.meta}</span></span>
+  </button>`;
+
+function summary(){
+  const i = pi(), rs = rows(true), sold = rs.filter(r => r.u > 0).sort((a, b) => b.rev - a.rev);
+  const share = S.plat === 'all' ? 1 : S.plat === 'wn' ? .61 : .39, other = i === 1 && !S.brands.length;
+  const rev = sum(rs, r => r.rev), units = sum(rs, r => r.u);
+  const prev = sum(rs, r => r.prev) + (other ? 369 * share : 0);
+  const prevUnits = sum(rs, r => Math.round(r.prev / r.asp)) + (other ? Math.round(3 * share) : 0);
+  const g = prev ? rev / prev - 1 : 0, listed = sum(rs, r => r.listed);
+  const orders = Math.round(units * .942), prevOrders = Math.round(prevUnits * .95);
+  const ch = (a, b) => (b && a ? pc(a / b - 1) : '—'), col = (a, b) => (!b || a >= b ? 'var(--acc)' : 'var(--dn)');
+  const aov = orders ? rev / orders : 0, pAov = prevOrders ? prev / prevOrders : 0, asp = units ? rev / units : 0, pAsp = prevUnits ? prev / prevUnits : 0;
+  const pts = Math.round(g * 23), vs = VS();
+  const t = {
+    heroLabel: ['Revenue today', 'Revenue this week', 'Revenue · last 30 days'][i], rev: f(rev), prevRev: f(prev),
+    gPill: (g >= 0 ? '▲ ' : '▼ ') + Math.round(Math.abs(g) * 100) + '%', gC: gCol(g),
+    diff: (g >= 0 ? '+' : '−') + f(Math.abs(rev - prev)), vs,
+    curName: ['Today', 'This week', 'Last 30 days'][i], prevName: ['Last Sunday', 'Last week', 'Previous 30'][i],
+    range: ['Sun 15 Nov, compared with Sun 8 Nov', 'Mon 9 – Sun 15 Nov, compared with 2 – 8 Nov', '17 Oct – 15 Nov, compared with 17 Sep – 16 Oct'][i]
+  };
+  const shape = [
+    { c: [0, 0, .03, .34, .36, .4, .62, 1], p: [0, .02, .05, .3, .34, .4, .66, 1], l: ['8am', '10', '12', '2pm', '4', '6', '8', '10pm'] },
+    { c: [1420, 2600, 4860, 8000, 10890, 14300, 18824].map(v => v / 18824), p: [1210, 2550, 4370, 6820, 9200, 11960, 15430].map(v => v / 15430), l: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] },
+    { c: [.12, .31, .52, .74, 1], p: [.18, .4, .61, .81, 1], l: ['17 Oct', '24', '31', '7 Nov', '15'] }
+  ][i];
+  const mx = Math.max(rev, prev, 1), n = shape.c.length;
+  const line = (fr, tot) => fr.map((v, j) => (j / (n - 1) * 342).toFixed(1) + ',' + (122 - v * tot / mx * 120).toFixed(1)).join(' ');
+  const cur = line(shape.c, rev);
+  const chart = { cur, prev: line(shape.p, prev), area: '0,130 ' + cur + ' 342,130', endY: (122 - rev / mx * 120).toFixed(1), labels: shape.l };
+  const d = sold.map((r, j) => deco(r, j));
+  const growing = d.filter(r => r.g > 0).sort((a, b) => b.g - a.g).slice(0, 4);
+  const cooling = rs.filter(r => r.g <= -.1 && (r.u > 0 || r.prev > 0)).sort((a, b) => a.g - b.g).map((r, j) => deco(r, j));
+  const pulse = [];
+  if (d[0]) pulse.push({ label: 'TOP SELLER', value: d[0].revF, name: d[0].name, color: 'var(--fg)', id: d[0].id });
+  if (growing[0]) pulse.push({ label: 'GROWING', value: growing[0].gF, name: growing[0].name, color: 'var(--acc)', id: growing[0].id });
+  if (cooling[0]) pulse.push({ label: 'COOLING', value: cooling[0].gF, name: cooling[0].name, color: 'var(--dn)', id: cooling[0].id });
+  const sz = {};
+  rs.forEach(r => alloc(r.u, r.sizes).forEach((c, j) => { sz[r.sizes[j]] = (sz[r.sizes[j]] || 0) + c; }));
+  const topSizes = Object.keys(sz).map(k => ({ size: k, n: sz[k] })).filter(x => x.n > 0).sort((a, b) => b.n - a.n).slice(0, 3);
+  const metrics = [
+    { label: 'Units sold', value: units, change: ch(units, prevUnits), color: col(units, prevUnits), sub: prevUnits + ' ' + vs.replace('vs ', '') },
+    { label: 'Avg order value', value: f(aov), change: ch(aov, pAov), color: col(aov, pAov), sub: orders + ' orders' },
+    { label: 'Avg sold price', value: f(asp), change: ch(asp, pAsp), color: col(asp, pAsp), sub: 'per pair' },
+    { label: 'Sell-through', value: (listed ? Math.round(units / listed * 100) : 0) + '%', change: (pts >= 0 ? '+' : '−') + Math.abs(pts) + ' pts', color: pts >= 0 ? 'var(--acc)' : 'var(--dn)', sub: units + ' of ' + listed + ' listed' }
+  ];
+  const split = splitOf(sum(rs, r => r.wnU * r.asp), sum(rs, r => r.ttU * r.asp), sum(rs, r => r.wnU), sum(rs, r => r.ttU));
+  return { t, chart, d, growing, cooling, pulse, topSizes, metrics, split };
+}
+
+function homeHTML(m){
+  const { t, chart } = m;
+  const platLabel = { all: 'All platforms', wn: 'Whatnot', tt: 'TikTok Live' }[S.plat];
+  const brandLabel = !S.brands.length ? 'All brands' : S.brands.length === 1 ? S.brands[0] : S.brands.length + ' brands';
+  return `<div class="screen">
+    <div class="px between" style="padding-top:14px">
+      <div style="display:flex;flex-direction:column;gap:2px"><div class="sub">Sun 15 Nov · next show 8:00pm</div><div style="font-size:22px;font-weight:700;letter-spacing:-.4px">Evening, Jenson</div></div>
+      ${filterBtn()}
+    </div>
+    <div class="px" style="padding-top:18px;display:flex;flex-direction:column;gap:10px">
+      ${segHTML()}
+      <div class="row" style="gap:8px"><button class="pill" data-act="openSheet">${platLabel} ▾</button><button class="pill" data-act="openSheet">${brandLabel} ▾</button></div>
+    </div>
+    <div class="px" style="padding-top:26px">
+      <div style="font-size:14px;color:var(--mute);font-weight:500">${t.heroLabel}</div>
+      <div style="font-size:clamp(46px,15vw,64px);font-weight:800;letter-spacing:-2.5px;line-height:1.05;margin-top:4px">${t.rev}</div>
+      <div class="row" style="gap:10px;margin-top:10px"><span style="background:${t.gC};color:#0A0A0A;font-size:14px;font-weight:800;padding:4px 10px;border-radius:999px">${t.gPill}</span><span style="font-size:14px;color:var(--fg2)">${t.diff} ${t.vs}</span></div>
+      <svg viewBox="-6 -10 354 142" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(120px,36vw,170px);margin-top:22px;overflow:visible">
+        <polygon points="${chart.area}" fill="var(--acc)" opacity=".08"></polygon>
+        <polyline points="${chart.prev}" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="4 5" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline>
+        <polyline points="${chart.cur}" fill="none" stroke="var(--acc)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polyline>
+      </svg>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--mute);margin-top:6px;font-weight:500">${chart.labels.map(l => `<span>${l}</span>`).join('')}</div>
+      <div class="row" style="gap:18px;margin-top:12px;font-size:12px;color:var(--mute);flex-wrap:wrap">
+        <span class="row" style="gap:6px"><span style="width:10px;height:3px;border-radius:2px;background:var(--acc)"></span>${t.curName} · ${t.rev}</span>
+        <span class="row" style="gap:6px"><span style="width:10px;height:3px;border-radius:2px;background:var(--mute)"></span>${t.prevName} · ${t.prevRev}</span>
+      </div>
+    </div>
+    ${m.pulse.length ? `<div class="px grid3" style="padding-top:22px">${m.pulse.map(p => `
+      <button class="card tap" data-act="open" data-arg="${p.id}" style="padding:12px;display:flex;flex-direction:column;gap:3px;min-width:0">
+        <span style="font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mute)">${p.label}</span>
+        <span style="font-size:22px;font-weight:800;letter-spacing:-.6px;margin-top:4px;color:${p.color}">${p.value}</span>
+        <span style="font-size:12px;color:var(--fg2);line-height:1.25">${p.name}</span>
+      </button>`).join('')}</div>` : ''}
+    <div class="px grid2" style="padding-top:12px">${m.metrics.map(x => `
+      <div class="card" style="padding:16px;min-width:0">
+        <div class="sub">${x.label}</div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:6px;margin-top:6px"><span style="font-size:clamp(24px,7.5vw,30px);font-weight:800;letter-spacing:-1px">${x.value}</span><span style="font-size:13px;font-weight:700;color:${x.color}">${x.change}</span></div>
+        <div style="font-size:12px;color:var(--mute);margin-top:2px">${x.sub}</div>
+      </div>`).join('')}</div>
+    ${m.growing.length ? `<div style="padding-top:36px">
+      <div class="px baseline"><div class="h2">Growing fastest</div><div class="sub">${m.t.vs}</div></div>
+      <div class="hscroll">${m.growing.map(p => `
+        <button class="card tap" data-act="open" data-arg="${p.id}" style="flex:none;width:150px;border-radius:20px;overflow:hidden">
+          ${thumb(p, '150px', '112px', 0, 30)}
+          <span style="display:block;padding:12px 14px 14px"><span style="display:block;font-size:32px;font-weight:800;letter-spacing:-1.2px;color:var(--acc);line-height:1">${p.gF}</span><span style="display:block;font-size:14px;font-weight:600;margin-top:8px;line-height:1.25">${p.name}</span><span style="display:block;font-size:12px;color:var(--mute);margin-top:2px">${p.cw} · ${p.diffF}</span></span>
+        </button>`).join('')}<span style="flex:none;width:1px"></span></div>
+    </div>` : ''}
+    <div class="px" style="padding-top:36px">
+      <div class="baseline"><div class="h2">Best sellers</div><div class="sub">by revenue</div></div>
+      <div style="margin-top:6px">${m.d.slice(0, 10).map(p => listRow(p, p.sizesF)).join('')}</div>
+      ${m.d.length ? '' : '<div style="font-size:14px;color:var(--mute);padding:20px 0">No sales match these filters.</div>'}
+    </div>
+    ${m.cooling.length ? `<div class="px" style="padding-top:30px">
+      <div style="background:var(--card);border-radius:24px;padding:20px;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--dn) 40%,transparent)">
+        <div class="baseline"><div class="h2">Cooling off</div><div style="font-size:13px;font-weight:700;color:var(--dn)">${m.cooling.length} product${m.cooling.length === 1 ? '' : 's'}</div></div>
+        <div style="font-size:14px;color:var(--fg2);line-height:1.45;margin-top:8px">You're holding ${sum(m.cooling, r => r.stock)} pairs of these. Reprice or pause restocks before tonight's show.</div>
+        <div style="margin-top:10px">${m.cooling.map(p => `
+          <button class="tap" data-act="open" data-arg="${p.id}" style="width:100%;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+            ${thumb(p, '48px', '48px', 12, 15)}
+            <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</span><span style="font-size:12px;color:var(--mute)">${p.u} sold · ${p.stock} in stock</span></span>
+            <span style="display:flex;flex-direction:column;gap:6px;align-items:flex-end"><span style="font-size:18px;font-weight:800;color:var(--dn);letter-spacing:-.4px">${p.gF}</span><span style="font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;white-space:nowrap;${p.reprice ? 'background:var(--acc);color:#0A0A0A' : 'color:var(--fg2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)'}">${p.action}</span></span>
+          </button>`).join('')}</div>
+      </div>
+    </div>` : ''}
+    <div class="px" style="padding-top:36px">
+      <div class="h2">Where it sold</div>
+      ${splitHTML(m.split)}
+      <div class="between" style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line);gap:12px">
+        <div style="font-size:14px;color:var(--mute)">Top sizes</div>
+        <div class="row" style="gap:6px">${m.topSizes.map(s => `<span style="font-size:13px;font-weight:600;padding:6px 10px;border-radius:10px;background:var(--card);display:flex;gap:5px">UK ${s.size}<span style="color:var(--mute);font-weight:500">${s.n}</span></span>`).join('')}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function productsHTML(m){
+  return `<div class="screen px" style="padding-top:14px">
+    <div class="between" style="gap:12px"><h1 style="margin:0;font-size:28px;font-weight:800;letter-spacing:-.8px">Products</h1><button class="pill" data-act="openSheet">${m.t.curName} · Filter ▾</button></div>
+    <div style="margin-top:14px">${segHTML()}</div>
+    <div style="margin-top:6px">${m.d.map(p => listRow(p, p.stock + ' in stock')).join('')}</div>
+    ${m.d.length ? '' : '<div style="font-size:14px;color:var(--mute);padding:20px 0">No sales match these filters.</div>'}
+  </div>`;
+}
+
+function detailHTML(){
+  const vs = VS();
+  const ranked = rows(false).sort((a, b) => b.rev - a.rev);
+  const idx = Math.max(0, ranked.findIndex(r => r.id === S.pid)), r = ranked[idx];
+  const main = alloc(Math.floor(r.u * .78), r.sizes), other = r.u - main.reduce((x, y) => x + y, 0), mx = Math.max(1, ...main, other);
+  const sizes = r.sizes.map((s, i) => ({ label: 'UK ' + s, n: main[i] })).concat(other ? [{ label: 'Other', n: other }] : []);
+  const base = [1,1,0,2,2,1,3,2,4,1,1,2,3,3,3,5,1,2,3,4,4,4,6,2,2,4,6,5,5,10];
+  const grow = r.g > .25 && r.stock < 8, cool = r.g < -.1, done = S.repriced[r.id];
+  const rankF = '#' + (idx + 1) + ' ' + { today: 'today', week: 'this week', month: 'in 30 days' }[S.period];
+  const scope = { today: 'today', week: 'this week', month: 'last 30 days' }[S.period] + (S.plat === 'all' ? '' : S.plat === 'wn' ? ' · Whatnot' : ' · TikTok Live');
+  const gPill = (r.g >= 0 ? '▲ ' : '▼ ') + Math.round(Math.abs(r.g) * 100) + '%';
+  const diffF = (r.g >= 0 ? '+' : '−') + f(Math.abs(r.rev - r.prev));
+  const stats = [
+    { label: 'Units sold', value: r.u, sub: Math.round(r.prev / r.asp) + ' ' + vs.replace('vs ', '') },
+    { label: 'Avg sold', value: '£' + r.asp, sub: 'per pair' },
+    { label: 'AOV', value: '£' + Math.round(r.asp * 1.12), sub: 'with add-ons' },
+    { label: 'Highest', value: '£' + Math.round(r.asp * 1.185), sub: 'UK ' + r.sizes[0] },
+    { label: 'Lowest', value: '£' + Math.round(r.asp * .852), sub: 'UK ' + r.sizes[r.sizes.length - 1] },
+    { label: 'Sell-through', value: (r.listed ? Math.round(r.u / r.listed * 100) : 0) + '%', sub: r.u + ' of ' + r.listed }
+  ];
+  const sales = SHOWS.filter(s => S.plat === 'all' || s[2] === S.plat).map((s, i) => ({ show: s[0], meta: s[1] + ' · UK ' + r.sizes[i % r.sizes.length] + ' · ' + (s[2] === 'wn' ? 'Whatnot' : 'TikTok Live'), price: '£' + Math.round(r.asp * s[3]) }));
+  const nudge = (grow || cool) ? `
+    <div class="px" style="padding-top:20px">
+      <div class="card between" style="box-shadow:inset 0 0 0 1px color-mix(in srgb,${grow ? 'var(--acc)' : 'var(--dn)'} 45%,transparent);padding:14px 16px;gap:12px">
+        <div style="font-size:14px;line-height:1.4"><b>${done ? 'Done.' : grow ? r.stock + ' pairs left.' : 'Cooling off.'}</b> <span style="color:var(--fg2)">${done ? (grow ? 'Added to your restock list.' : 'Flagged to reprice before the next show.') : grow ? "About one show's worth at this pace." : r.stock + ' pairs in stock and slowing.'}</span></div>
+        <button data-act="nudge" data-arg="${r.id}" class="tap" style="flex:none;font-size:13px;font-weight:800;padding:10px 16px;border-radius:999px;background:var(--acc);color:#0A0A0A">${done ? 'Undo' : grow ? 'Restock' : 'Reprice'}</button>
+      </div>
+    </div>` : '';
+  return `<div class="screen">
+    <div class="px between" style="padding-top:10px">
+      <button class="iconbtn" data-act="back" aria-label="Back" style="font-size:26px;line-height:1;padding-bottom:3px">‹</button>
+      <div style="font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;background:var(--card)">${rankF}</div>
+      ${filterBtn()}
+    </div>
+    <div class="px" style="padding-top:18px">
+      ${thumb(r, '100%', 'clamp(190px,56vw,260px)', 28, 64)}
+      <h1 style="margin:20px 0 0;font-size:28px;font-weight:800;letter-spacing:-.8px">${r.name}</h1>
+      <div style="font-size:15px;color:var(--mute);margin-top:2px">${r.cw} · ${scope}</div>
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:20px">
+        <div><div style="font-size:14px;color:var(--mute);font-weight:500">Revenue</div><div style="font-size:clamp(40px,13vw,56px);font-weight:800;letter-spacing:-2px;line-height:1.05">${f(r.rev)}</div></div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;padding-bottom:8px"><span style="background:${gCol(r.g)};color:#0A0A0A;font-size:14px;font-weight:800;padding:4px 10px;border-radius:999px">${gPill}</span><span style="font-size:13px;color:var(--fg2);text-align:right">${diffF} ${vs}</span></div>
+      </div>
+    </div>
+    ${nudge}
+    <div class="px grid3" style="padding-top:12px">${stats.map(s => `<div class="card" style="padding:14px;min-width:0"><div style="font-size:12px;color:var(--mute)">${s.label}</div><div style="font-size:clamp(20px,6vw,24px);font-weight:800;letter-spacing:-.6px;margin-top:4px">${s.value}</div><div style="font-size:12px;color:var(--mute);margin-top:1px">${s.sub}</div></div>`).join('')}</div>
+    <div class="px" style="padding-top:36px">
+      <div class="baseline"><div class="h2">30-day trend</div><div class="sub">${r.mo} sold · ${f(r.mo * r.asp)}</div></div>
+      <div style="display:flex;align-items:flex-end;gap:3px;height:96px;margin-top:18px" aria-hidden="true">${base.map((b, i) => `<div style="flex:1;height:${Math.max(2, b * 9)}px;background:${i >= 23 ? 'var(--acc)' : 'var(--dim)'};border-radius:3px"></div>`).join('')}</div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--mute);margin-top:8px;font-weight:500"><span>17 Oct</span><span style="color:var(--fg)">Last 7 days</span></div>
+    </div>
+    <div class="px" style="padding-top:36px">
+      <div class="baseline"><div class="h2">Sizes</div><div class="sub">units sold</div></div>
+      <div style="display:flex;flex-direction:column;gap:9px;margin-top:16px;font-size:13px">${sizes.map(s => { const top = s.n === mx; return `
+        <div style="display:grid;grid-template-columns:48px minmax(0,1fr) 24px;gap:12px;align-items:center"><span style="color:${top ? 'var(--fg)' : 'var(--mute)'};font-weight:${top ? 700 : 400}">${s.label}</span><span style="height:10px"><span style="display:block;width:${Math.round(s.n / mx * 100)}%;height:100%;background:${top ? 'var(--acc)' : 'var(--dim)'};border-radius:5px"></span></span><span style="text-align:right;font-weight:600">${s.n}</span></div>`; }).join('')}</div>
+    </div>
+    <div class="px" style="padding-top:36px"><div class="h2">Where it sold</div>${splitHTML(splitOf(r.wnU * r.asp, r.ttU * r.asp, r.wnU, r.ttU))}</div>
+    <div class="px" style="padding-top:36px">
+      <div class="h2">Recent sales</div>
+      <div style="margin-top:6px">${sales.map(s => `<div class="between" style="gap:12px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><div style="font-size:15px;font-weight:600">${s.show}</div><div class="sub" style="margin-top:2px">${s.meta}</div></div><div style="font-size:16px;font-weight:700">${s.price}</div></div>`).join('')}</div>
+    </div>
+  </div>`;
+}
+
+function simpleHTML(title, body){
+  return `<div class="screen px" style="padding-top:14px"><h1 style="margin:0;font-size:28px;font-weight:800;letter-spacing:-.8px">${title}</h1>${body}</div>`;
+}
+function showsHTML(){
+  const upcoming = [['Sunday Night Heat 🔥','Tonight · 8:00pm','Whatnot'],['Monday Restock Drop','Mon 16 Nov · 7:30pm','TikTok Live'],['Midweek Madness','Wed 18 Nov · 8:00pm','Whatnot']];
+  const past = [['Cosy Season Sale','Sun 15 Nov','TikTok Live'],['Saturday Sole Session','Sat 14 Nov','Whatnot'],['Payday Friday Steals','Fri 13 Nov','TikTok Live']];
+  const item = (s, hi) => `<div class="between" style="gap:12px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><div style="font-size:15px;font-weight:600">${s[0]}</div><div class="sub" style="margin-top:2px">${s[1]}</div></div><span style="font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;${hi ? 'background:var(--acc);color:#0A0A0A' : 'color:var(--fg2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)'}">${s[2]}</span></div>`;
+  return simpleHTML('Shows', `<div class="h2" style="margin-top:24px">Upcoming</div><div style="margin-top:6px">${upcoming.map((s, i) => item(s, i === 0)).join('')}</div><div class="h2" style="margin-top:32px">Recent</div><div style="margin-top:6px">${past.map(s => item(s, false)).join('')}</div>`);
+}
+function payoutsHTML(m){
+  return simpleHTML('Payouts', `<div class="card" style="margin-top:20px;padding:20px"><div class="sub">${m.t.heroLabel}</div><div style="font-size:40px;font-weight:800;letter-spacing:-1.5px;margin-top:4px">${m.t.rev}</div><div class="sub" style="margin-top:6px">Payout schedules from Whatnot and TikTok Live will show here once connected.</div></div>${splitHTML(m.split)}`);
+}
+function profileHTML(){
+  const row = (l, v) => `<div class="between" style="padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-size:15px">${l}</span><span class="sub">${v}</span></div>`;
+  return simpleHTML('Profile', `<div class="row" style="gap:14px;margin-top:20px"><div style="width:56px;height:56px;border-radius:28px;background:var(--acc);color:#0A0A0A;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px">J</div><div><div style="font-size:18px;font-weight:700">Jenson</div><div class="sub">Dell Boy</div></div></div><div style="margin-top:16px">${row('Whatnot', 'Connected')}${row('TikTok Live', 'Connected')}${row('Currency', 'GBP £')}</div>`);
+}
+
+const TABS = [
+  ['home', 'Home', c => `<span style="width:18px;height:18px;border-radius:6px;background:${c}"></span>`],
+  ['products', 'Products', c => `<span style="display:grid;grid-template-columns:8px 8px;gap:3px">${('<span style="width:8px;height:8px;border-radius:2.5px;background:' + c + '"></span>').repeat(4)}</span>`],
+  ['shows', 'Shows', c => `<span style="width:18px;height:18px;border-radius:9px;border:2px solid ${c};display:flex;align-items:center;justify-content:center"><span style="width:6px;height:6px;border-radius:3px;background:${c}"></span></span>`],
+  ['payouts', 'Payouts', c => `<span style="width:18px;height:18px;border-radius:9px;border:2px solid ${c};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;line-height:1">£</span>`],
+  ['profile', 'Profile', c => `<span style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="width:8px;height:8px;border-radius:4px;background:${c}"></span><span style="width:16px;height:7px;border-radius:7px 7px 2px 2px;background:${c}"></span></span>`]
+];
+function tabsHTML(){
+  const active = S.view === 'detail' ? S.back : S.view;
+  return TABS.map(([k, l, ic]) => { const on = active === k; const c = on ? 'var(--fg)' : 'var(--mute)';
+    return `<button data-act="tab" data-arg="${k}" ${on ? 'aria-current="page"' : ''}><span class="ti" aria-hidden="true">${ic(c)}</span>${l}</button>`; }).join('');
+}
+
+function sheetHTML(m){
+  const i = pi();
+  return `<div class="grab"></div>
+    <div class="baseline" style="margin-top:18px"><h2 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.5px">Filters</h2><button data-act="reset" style="font-size:15px;color:var(--fg2);font-weight:500;padding:8px 0 8px 16px">Reset</button></div>
+    <div class="sub" style="font-weight:500;margin-top:16px">Period</div>
+    <div class="seg" role="group" aria-label="Period" style="background:var(--bg);height:48px;margin-top:10px">${[['today','Today'],['week','Week'],['month','Month']].map(([k,l]) => `<button data-act="period" data-arg="${k}" aria-pressed="${S.period === k}" style="font-size:15px">${l}</button>`).join('')}</div>
+    <div class="sub" style="margin-top:8px">${m.t.range}</div>
+    <div class="sub" style="font-weight:500;margin-top:24px">Platform</div>
+    <div role="radiogroup" aria-label="Platform" style="margin-top:4px">${[['all','All platforms'],['wn','Whatnot'],['tt','TikTok Live']].map(([k,l]) => { const on = S.plat === k; return `<button role="radio" aria-checked="${on}" data-act="plat" data-arg="${k}" class="between" style="width:100%;height:50px;border-bottom:1px solid var(--line)"><span style="font-size:16px;font-weight:${on ? 600 : 400}">${l}</span><span class="radio${on ? ' on' : ''}"></span></button>`; }).join('')}</div>
+    <div class="sub" style="font-weight:500;margin-top:20px">Brand</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">${BRANDS.map(name => `<button class="chip" data-act="brand" data-arg="${name}" aria-pressed="${S.brands.includes(name)}">${name}<span style="font-weight:500;opacity:.6">${P.filter(r => r[2] === name).length}</span></button>`).join('')}</div>
+    <button class="cta" data-act="closeSheet">Show ${m.d.length} product${m.d.length === 1 ? '' : 's'}</button>`;
+}
+
+let lastView = null;
+function render(){
+  const m = summary();
+  const html = S.view === 'home' ? homeHTML(m) : S.view === 'products' ? productsHTML(m) : S.view === 'detail' ? detailHTML()
+    : S.view === 'shows' ? showsHTML() : S.view === 'payouts' ? payoutsHTML(m) : profileHTML();
+  // keep the hscroll position when re-rendering the same screen
+  const hs = $view.querySelector('.hscroll'), hsx = hs ? hs.scrollLeft : 0;
+  $view.innerHTML = html;
+  if (lastView === S.view) { $view.firstElementChild && ($view.firstElementChild.style.animation = 'none'); const h2 = $view.querySelector('.hscroll'); if (h2) h2.scrollLeft = hsx; }
+  lastView = S.view;
+  $tabs.innerHTML = tabsHTML();
+  const st = $sheet.scrollTop; $sheet.innerHTML = sheetHTML(m); $sheet.scrollTop = st;
+  document.body.classList.toggle('sheet-open', S.sheet);
+  $sheet.setAttribute('aria-hidden', String(!S.sheet));
+}
+
+function go(view, pid){
+  if (view === S.view && !pid) { $scroll.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+  S.back = S.view === 'detail' ? S.back : S.view;
+  S.view = view; if (pid) S.pid = pid;
+  render(); $scroll.scrollTop = 0;
+  if (view === 'detail') history.pushState({ v: 'detail' }, '');
+}
+
+const ACT = {
+  period: k => { S.period = k; },
+  plat: k => { S.plat = k; },
+  brand: n => { S.brands = S.brands.includes(n) ? S.brands.filter(b => b !== n) : S.brands.concat(n); },
+  openSheet: () => { S.sheet = true; },
+  closeSheet: () => { S.sheet = false; },
+  reset: () => { S.period = 'week'; S.plat = 'all'; S.brands = []; },
+  nudge: id => { S.repriced = Object.assign({}, S.repriced, { [id]: !S.repriced[id] }); },
+  tab: v => { S.sheet = false; go(v); return true; },
+  open: id => { go('detail', id); return true; },
+  back: () => { if (history.state && history.state.v === 'detail') history.back(); else go(S.back); return true; }
+};
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]'); if (!el) return;
+  const fn = ACT[el.dataset.act]; if (!fn) return;
+  if (!fn(el.dataset.arg)) render();
+});
+window.addEventListener('popstate', () => { if (S.view === 'detail') { S.view = S.back; render(); $scroll.scrollTop = 0; } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && S.sheet) { S.sheet = false; render(); } });
+
+// swipe the sheet down to dismiss
+(function(){
+  let y0 = null, dy = 0;
+  $sheet.addEventListener('touchstart', e => { if ($sheet.scrollTop <= 0) { y0 = e.touches[0].clientY; dy = 0; } }, { passive: true });
+  $sheet.addEventListener('touchmove', e => { if (y0 === null) return; dy = e.touches[0].clientY - y0; if (dy > 0) { $sheet.style.transition = 'none'; $sheet.style.transform = `translateY(${dy}px)`; } }, { passive: true });
+  $sheet.addEventListener('touchend', () => { if (y0 === null) return; $sheet.style.transition = ''; $sheet.style.transform = ''; if (dy > 90) { S.sheet = false; render(); } y0 = null; });
+})();
+
+render();
+})();
+</script>
+</body>
+</html>
